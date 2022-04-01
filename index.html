@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	.circlered{
+		background-color:red;
+		border-radius:100%;
+		height:100px;
+		width:100px;
+		position:absolute;
+		transition:1s;
+	}
+	.circle1{
+		left: 268px;
+		top: 208px;
+	}
+	.circle2{
+		left: 651px;
+		top: 141px;
+	}
+	.circle3{
+		left: 701px;
+		top: 365px;
+	}
+	.circle4{
+		left: 1138px;
+		top: 315px;
+	}
+	.circle5{
+		left: 1299px;
+		top: 141px;
+	}
+	.circle6{
+		left: 1088px;
+		top: 593px;
+	}
+	.circle7{
+		left: 701px;
+		top: 572px;
+	}
+	.circle8{
+		left: 467px;
+		top: 729px;
+	}
+	.circle9{
+		left: 801px;
+		top: 779px;
+	}
+	.circle10{
+		left: 1376px;
+		top: 779px;
+	}
+	.circle11{
+		left: 901px;
+		top: 392px;
+	}
+	.circle12{
+		left: 1001px;
+		top: 119px;
+	}
+	.umer{
+		display: none;
+	}
+
+</style>
+<body>
+	<div class="divs1">
+		<h1>Собранные шарики:<span class="score">0</span></h1>
+		<h1>У тебя 9 секунд, игра начнется после 2 секунд с прогрузки сайта</h1>
+	</div>
+	<div class="divs2">
+		<div class="circle circlered circle1"></div>
+		<div class="circle circlered circle2"></div>
+		<div class="circle circlered circle3"></div>
+		<div class="circle circlered circle4"></div>
+		<div class="circle circlered circle5"></div>
+		<div class="circle circlered circle6"></div>
+		<div class="circle circlered circle7"></div>
+		<div class="circle circlered circle8"></div>
+		<div class="circle circlered circle9"></div>
+		<div class="circle circlered circle10"></div>
+		<div class="circle circlered circle11"></div>
+		<div class="circle circlered circle12"></div>
+	</div>
+	<div>
+		<h1 class="umer">LOOSER! У тебя не хватают очки</h1>
+	</div>
+</body>
+<script type="text/javascript">
+
+
+
+
+	let umer = document.querySelector(".umer")
+	let divs1 = document.querySelector(".divs1")
+	let divs2 = document.querySelector(".divs2")
+	let score = 0;
+	let circle1 = document.querySelector(".circle1")
+	let circle2 = document.querySelector(".circle2")
+	let circle3 = document.querySelector(".circle3")
+	let circle4 = document.querySelector(".circle4")
+	let circle5 = document.querySelector(".circle5")
+	let circle6 = document.querySelector(".circle6")
+	let circle7 = document.querySelector(".circle7")
+	let circle8 = document.querySelector(".circle8")
+	let circle9 = document.querySelector(".circle9")
+	let circle10 = document.querySelector(".circle10")
+	let circle11 = document.querySelector(".circle11")
+	let circle12 = document.querySelector(".circle12")
+	let circles = document.querySelectorAll(".circle")
+	function start(){
+		setTimeout(ded,16000)
+	}
+	function ded(){
+		if(score==12){
+			alert("u've won")
+		}
+		divs1.style.display="none"
+		divs2.style.display="none"
+		umer.style.display="block"
+	}
+	function move(){
+		let num1 = Math.random();
+		let num_big1 = num1*1740;
+		let x1 = Math.round(num_big1);
+		let num2 = Math.random();
+		let num_big2 = num2*810;
+		let y1 = Math.round(num_big2);
+		circle1.style.top=y1+"px";
+		circle1.style.left=x1+"px";
+
+		let num3 = Math.random();
+		let num_big3 = num3*1740;
+		let x2 = Math.round(num_big3);
+		let num4 = Math.random();
+		let num_big4 = num4*810;
+		let y2 = Math.round(num_big4);
+		circle2.style.top=y2+"px";
+		circle2.style.left=x2+"px";
+
+		let num5 = Math.random();
+		let num_big5 = num5*1740;
+		let x3 = Math.round(num_big5);
+		let num6 = Math.random();
+		let num_big6 = num6*810;
+		let y3 = Math.round(num_big6);
+		circle3.style.top=y3+"px";
+		circle3.style.left=x3+"px";
+
+		let num7 = Math.random();
+		let num_big7 = num7*1740;
+		let x4 = Math.round(num_big7);
+		let num8 = Math.random();
+		let num_big8 = num8*810;
+		let y4 = Math.round(num_big8);
+		circle4.style.top=y4+"px";
+		circle4.style.left=x4+"px";
+
+		let num9 = Math.random();
+		let num_big9 = num9*1740;
+		let x5 = Math.round(num_big9);
+		let num10 = Math.random();
+		let num_big10 = num10*810;
+		let y5 = Math.round(num_big10);
+		circle5.style.top=y5+"px";
+		circle5.style.left=x5+"px";
+
+		let num11 = Math.random();
+		let num_big11 = num11*1740;
+		let x6 = Math.round(num_big11);
+		let num12 = Math.random();
+		let num_big12 = num12*810;
+		let y6 = Math.round(num_big12);
+		circle6.style.top=y6+"px";
+		circle6.style.left=x6+"px";
+
+		let num13 = Math.random();
+		let num_big13 = num13*1740;
+		let x7 = Math.round(num_big13);
+		let num14 = Math.random();
+		let num_big14 = num14*810;
+		let y7 = Math.round(num_big14);
+		circle7.style.top=y7+"px";
+		circle7.style.left=x7+"px";
+
+		let num15 = Math.random();
+		let num_big15 = num15*1740;
+		let x8 = Math.round(num_big15);
+		let num16 = Math.random();
+		let num_big16 = num16*810;
+		let y8 = Math.round(num_big16);
+		circle8.style.top=y8+"px";
+		circle8.style.left=x8+"px";
+
+		let num17 = Math.random();
+		let num_big17 = num17*1740;
+		let x9 = Math.round(num_big17);
+		let num18 = Math.random();
+		let num_big18 = num18*810;
+		let y9 = Math.round(num_big18);
+		circle9.style.top=y9+"px";
+		circle9.style.left=x9+"px";
+
+		let num19 = Math.random();
+		let num_big19 = num19*1740;
+		let x10 = Math.round(num_big19);
+		let num20 = Math.random();
+		let num_big20 = num20*810;
+		let y10 = Math.round(num_big20);
+		circle10.style.top=y10+"px";
+		circle10.style.left=x10+"px";
+
+		let num21 = Math.random();
+		let num_big21 = num21*1740;
+		let x11 = Math.round(num_big21);
+		let num22 = Math.random();
+		let num_big22 = num22*810;
+		let y11 = Math.round(num_big22);
+		circle11.style.top=y11+"px";
+		circle11.style.left=x11+"px";
+
+		let num23 = Math.random();
+		let num_big23 = num23*1740;
+		let x12 = Math.round(num_big23);
+		let num24 = Math.random();
+		let num_big24 = num24*810;
+		let y12 = Math.round(num_big24);
+		circle12.style.top=y12+"px";
+		circle12.style.left=x12+"px";
+
+
+	}
+	circle1.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle1.style.display="none"
+	}
+	circle2.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle2.style.display="none"
+	}
+	circle3.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle3.style.display="none"
+	}
+	circle4.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle4.style.display="none"
+	}
+	circle5.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle5.style.display="none"
+	}
+	circle6.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle6.style.display="none"
+	}
+	circle7.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle7.style.display="none"
+	}
+	circle8.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle8.style.display="none"
+	}
+	circle9.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle9.style.display="none"
+	}
+	circle10.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle10.style.display="none"
+	}
+	circle11.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle11.style.display="none"
+	}
+	circle12.onclick=function() {
+		score=score+1;
+		document.querySelector(".score").innerHTML=score
+		circle12.style.display="none"
+	}
+	setTimeout(start,2000)
+	setInterval(move,1500)
+</script>
+</html>
